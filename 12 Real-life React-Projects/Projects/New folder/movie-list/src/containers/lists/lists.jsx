@@ -1,41 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Card  from '../../components/cards/cards';
+import Card from '../../components/cards/cards';
 
-class List extends React.Component {
+class List extends Component {
   constructor() {
     super();
-
     this.state = {
       data: [],
-      loading: true
-    }
-  };
+      loading: true,
+    };
+  }
 
   async componentDidMount() {
-    try {
-      const movies = await fetch('../../../assets/data.json');
-      const movieJSON = await movies.json();
-      if (movieJSON) {
-        this.setState({
-          data: movieJSON,
-          loading: false
-        })
-      };
-    } 
-    catch(error) {
-      console.log(error);
-      // do something with error
+    const movies = await fetch('./data.json');
+    const moviesJSON = await movies.json();
+
+    if (moviesJSON) {
+      this.setState({
+        data: moviesJSON,
+        loading: false,
+      });
     }
-  };
+  }
 
   render() {
     const { data, loading } = this.state;
+
     if (loading) {
-      return <div>Loading...</div>
+      return <div>Loading...</div>;
     }
-    return data.map( movie => <Card key={movie.id} movie={movie} /> )
-  };
-};
+
+    return (
+      <div className='row'>
+        {data.map(movie => (
+          <div key={movie.id} className='col-sm-2'>
+            <Card movie={movie} />
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
 
 export default List;
