@@ -13,11 +13,12 @@ const imageStyles = {
   height: '100px'
 };
 
-const Card = () => {
+const Card = () => (
   <Fragment styles={styles}>
     <h1>Hi there</h1>
     <img src={ImageAvatar} styles={imageStyles} alt="avatar"/>
   </Fragment>
-};
+);
+
 
 export default Card;

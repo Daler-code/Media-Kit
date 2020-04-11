@@ -1,7 +1,7 @@
 const googleSearch = require('./search-algorithms');
 
 // Database Mock data;
-dbMock = [
+const dbMock = [
   'dog.com',
   'cheesepuff.com',
   'disney.com',

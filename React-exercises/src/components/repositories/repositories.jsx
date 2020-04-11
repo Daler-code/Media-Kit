@@ -5,7 +5,6 @@ function Repositories({ loading, results, error }) {
   if (loading || error) {
     return loading ? "Loading..." : error.message;
   }
-
   return (
     <Fragment>
       <h1> My repos using HOC </h1>
