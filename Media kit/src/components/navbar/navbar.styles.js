@@ -33,6 +33,7 @@ export const LinkStyled = styled(Nav.Link)`
   color: white;
   margin-left: 25px;
   margin-right: 25px;
+  font-weight: 500;
   &:hover {
     color: white;
   }
