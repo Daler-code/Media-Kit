@@ -7,6 +7,7 @@ import NavbarMain from '../../components/navbar/navbar';
 import AuthorsSection from '../../components/authors-section/authors-section';
 import UserDevicesSection from '../../components/users-devices-section/users-devices-section';
 import HowWeDoSection from '../../components/how-we-do-section/how-we-do-section';
+import UsersStatistics from '../../components/users-statistics-section/users-statistics-section';
 import Footer from '../../components/footer/footer';
 
 const LandingPage = () => (
@@ -16,6 +17,7 @@ const LandingPage = () => (
     <AuthorsSection />
     <UserDevicesSection />
     <HowWeDoSection />
+    <UsersStatistics />
     <Footer />
   </StyledContainer>
 );
